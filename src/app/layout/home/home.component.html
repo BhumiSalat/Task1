@@ -1,0 +1,33 @@
+
+  <!-- Form starts -->
+  <form  style="margin-left:500px;margin-top:20px">
+  
+    <select [ngModel]="selecteddropdownoption" (ngModelChange)="onChange($event)" name="sel2">
+        <option [ngValue]="i" *ngFor="let i of dropdownoption">{{i}}</option>
+    </select>
+    
+      <button style="color:black;background-color: cornflowerblue; margin-left: 30px;" type="submit">Submit</button>
+      
+    </form><!-- Form ends -->    
+
+  
+<table style="border: 1px solid black;">
+    <thead style="border:1px solidd black">
+    <th>ID</th>
+    <th>Group</th>
+    <th>Count of User</th>
+    <th>Percentage</th>
+</thead>
+<tbody>
+<tr class="row" *ngFor="let dat of finaldata; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{dat.group}}</td>
+        <td>{{dat.user}}</td>
+        <td>{{dat.per}}</td>
+    </tr>
+</tbody>
+</table>
+
+
+    
+
